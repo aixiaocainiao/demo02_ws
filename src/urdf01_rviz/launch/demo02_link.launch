@@ -1,0 +1,6 @@
+<launch>
+    <!-- 在参数服务器中载入urdf文件 robot_description这都是固定的 -->
+    <param name="robot_description" textfile="$(find urdf01_rviz)/urdf/urdf/demo02_link.urdf"/>
+    <!-- 启动rviz args="-d $(find urdf01_rviz)/config/show_mycar.rviz" 这玩意保存的时配置 不是rviz里面显示的东西 这都是固定的格式-->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find urdf01_rviz)/config/show_mycar.rviz" />
+</launch>
